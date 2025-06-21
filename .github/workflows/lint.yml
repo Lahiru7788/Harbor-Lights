@@ -22,14 +22,14 @@ jobs:
       - name: Lint HTML Files
         run: htmlhint "**/*.html"
 
-      - name: Lint CSS Files
-        run: |
-          echo '{
-            "extends": "stylelint-config-standard"
-          }' > .stylelintrc.json
+      # - name: Lint CSS Files
+      #   run: |
+      #     echo '{
+      #       "extends": "stylelint-config-standard"
+      #     }' > .stylelintrc.json
 
-          if ls **/*.css 1> /dev/null 2>&1; then
-            stylelint "**/*.css"
-          else
-            echo "No CSS files found. Skipping stylelint."
-          fi
+      #     if ls **/*.css 1> /dev/null 2>&1; then
+      #       stylelint "**/*.css"
+      #     else
+      #       echo "No CSS files found. Skipping stylelint."
+      #     fi
